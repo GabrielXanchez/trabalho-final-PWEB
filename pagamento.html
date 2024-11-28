@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas de Pagamento</title>
+    <link rel="stylesheet" href="stylespagamento.css">
+    <script defer src="scriptpagamento.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Formas de Pagamento</h1>
+        <div class="payment-options">
+            <div class="option functional" id="boleto">
+                <img src="imagens/cartão.png" alt="Ícone de Boleto">
+                <p>Boleto</p>
+                <button id="boletoButton">Gerar Boleto</button>
+            </div>
+            <div class="option functional" id="credito">
+                <img src="imagens/boleto.png" alt="Ícone de Cartão de Crédito">
+                <p>Cartão de Crédito</p>
+                <button id="creditoButton">Pagar com Cartão</button>
+            </div>
+            <div class="option functional" id="pix">
+                <img src="imagens/pix.png" alt="Ícone de Pix">
+                <p>Pix</p>
+                <button id="pixButton">Pagar com Pix</button>
+            </div>
+        </div>
+
+        <!-- Modal Pix -->
+        <div id="qrCodeModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close" id="closeModalPix">&times;</span>
+                <h2>Pagamento via Pix</h2>
+                <canvas id="qrCodeCanvas"></canvas>
+                <button id="calculateFretePix">Calcular Frete</button>
+                <div id="freteResultPix"></div>
+            </div>
+        </div>
+
+        <!-- Modal Boleto -->
+        <div id="boletoModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close" id="closeModalBoleto">&times;</span>
+                <h2>Boleto Gerado</h2>
+                <p id="boletoCode"></p>
+                <button id="downloadBoleto">Baixar Boleto</button>
+            </div>
+        </div>
+
+        <!-- Modal Cartão de Crédito -->
+        <div id="creditoModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close" id="closeModalCredito">&times;</span>
+                <h2>Pagamento com Cartão de Crédito</h2>
+                <form id="creditoForm">
+                    <label for="cardNumber">Número do Cartão:</label>
+                    <input type="text" id="cardNumber" maxlength="16" placeholder="Digite o número do cartão">
+                    <label for="cardExpiry">Validade (MM/AA):</label>
+                    <input type="text" id="cardExpiry" maxlength="5" placeholder="MM/AA">
+                    <label for="cardCVV">CVV:</label>
+                    <input type="text" id="cardCVV" maxlength="3" placeholder="123">
+                    <button type="submit">Confirmar Pagamento</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canastra Boats | Cadastro</title>
+    <link href="styleformsign.css" rel="stylesheet">
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link href="img/icone.png" rel="icon">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Menu à esquerda -->
+        <div class="left-menu">
+            <div class="welcome-box">
+                <h1 class="text-success"><i class="fa fa-anchor me-3"></i> Canastra Boats</h1>
+                <br>
+                <p>Um nome em homenagem à beleza e exuberância da Serra da Canastra surge como inspiração para a criação de uma marca de Pontoon Boat, modelo de embarcação amada pelos americanos que proporciona segurança, beleza, liberdade e ótimo custo-benefício no mundo náutico.</p>
+                <p>A partir dessas primícias, a empresa buscou um dos melhores estaleiros do mundo nesse segmento, já consolidado há mais de 15 anos e especialista em Pontoons, certificados com as mais rigorosas inspeções internacionais, para formar uma parceria exclusiva no Brasil.</p>
+                <p>Baseado nessa mentalidade de qualidade, conforto e segurança, a marca Canastra Boats se coloca no mercado, oferecendo um produto de vanguarda com garantias a seus clientes para que vivam o prazer inigualável de navegar em nossas águas.</p>
+                <br>
+                <!-- Imagem centralizada -->
+                <div class="additional-images">
+                    <div class="img-container">
+                        <img src="formulario.webp" alt="Imagem Canastra Boat" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulário à direita -->
+        <div class="form-container">
+            <h2>Cadastro</h2>
+            <form action="cadastrar.php" method="post" id="cadastrar" name="cadastrar" class="form">
+                <div class="form-group">
+                    <label for="username"><i class="fa fa-user"></i> Nome de usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="fa fa-envelope"></i> E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password"><i class="fa fa-lock"></i> Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Cadastrar">
+                </div>
+                <div class="form-group">
+                    <a href="loginform.html">Já tenho login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

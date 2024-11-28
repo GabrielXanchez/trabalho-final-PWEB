@@ -1,0 +1,166 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(rgba(5, 5, 7, 0.185), rgba(5, 5, 7, 0.185)), url(fundoform.jpg);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Container principal */
+.main-container {
+  display: flex;
+  flex-direction: row; /* Disposição horizontal */
+  width: 90%;
+  max-width: 1200px;
+  justify-content: space-between;
+  gap: 20px; /* Espaçamento entre os elementos */
+}
+
+/* Menu à esquerda */
+.left-menu {
+  flex: 1;
+  background-color: #d5f5d5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-box h1 {
+  font-family: 'Pacifico', cursive;
+  color: #2E8B57; /* Cor verde especificada */
+  margin-bottom: 10px;
+}
+
+.welcome-box p {
+  color: #0F172B;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.additional-images {
+  text-align: center;
+}
+
+.img-container {
+  display: inline-block;
+}
+
+.img-fluid {
+  width: 100%;
+  max-width: 200px; /* Imagens menores */
+  border-radius: 8px;
+}
+
+/* Container do formulário à direita */
+.form-container {
+  flex: 1;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #a3f0a3; /* Cor do fundo onde os elementos estão */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Título do formulário */
+.form-container h2 {
+  font-family: 'Pacifico', cursive; /* Mesma fonte do título do menu */
+  color: #2E8B57; /* Mesma cor verde do título do menu */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+/* Estilos dos campos do formulário */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #0F172B;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Estilo do botão de submissão */
+.form-group input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #12802a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #0f172b;
+}
+
+/* Link para a página de cadastro */
+.form-group a {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: #12802a;
+}
+
+.form-group a:hover {
+  color: #0f172b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* Empilhar elementos verticalmente em telas menores */
+    gap: 10px; /* Menos espaçamento entre os elementos */
+  }
+
+  .left-menu,
+  .form-container {
+    max-width: 100%; /* Garantir que o conteúdo ocupe toda a largura disponível */
+    flex: none;
+  }
+
+  .img-fluid {
+    max-width: 150px; /* Tornar as imagens ainda menores */
+  }
+
+  .form-container h2 {
+    font-size: 24px; /* Reduzir o tamanho da fonte */
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container h2 {
+    font-size: 20px; /* Reduzir mais o tamanho da fonte */
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="password"] {
+    padding: 8px; /* Menos padding para ajustar em telas menores */
+  }
+
+  .form-group input[type="submit"] {
+    padding: 8px;
+  }
+}
